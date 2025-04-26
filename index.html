@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery Spinner Wheel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="spinner-container">
+        <div class="arrow" aria-hidden="true">▼</div>
+        <div class="wheel" id="wheel">
+            <div class="wheel-numbers">
+                <span class="number value-1000">$1000</span>
+                <span class="number value-2000">$2000</span>
+                <span class="number value-500">$500</span>
+                <span class="number value-1500">$1500</span>
+                <span class="number value-3000">$3000</span>
+                <span class="number value-800">$800</span>
+                <span class="number value-2500">$2500</span>
+                <span class="number value-1200">$1200</span>
+                <span class="number value-4000">$4000</span>
+                <span class="number value-750">$750</span>
+            </div>
+        </div>
+        <button id="spinButton" aria-label="Spin the wheel">Spin</button>
+        <div id="result" aria-live="polite" class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #ffffff;
+}
+
+.spinner-container {
+    position: relative;
+    text-align: center;
+}
+
+.arrow {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: red;
+    z-index: 1;
+}
+
+.wheel {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #f3f1f1;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform: rotate(0deg); /* Reset initial rotation to 0 */
+    background: conic-gradient(
+        #ff5733 0% 10%,
+        #ffc300 10% 20%,
+        #daf7a6 20% 30%,
+        #33ff57 30% 40%,
+        #33c3ff 40% 50%,
+        #8a33ff 50% 60%,
+        #ff33a6 60% 70%,
+        #ff8c33 70% 80%,
+        #33ff8c 80% 90%,
+        #a6ff33 90% 100%
+    );
+}
+
+.wheel::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #f3f1f1;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.wheel-numbers {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.number {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
+    transform-origin: center;
+    left: 50%;
+    top: 50%;
+    margin-left: -30px;
+    margin-top: -10px;
+}
+
+/* Adjust rotation and position for each value */
+.value-1000 { transform: rotate(18deg) translate(0, -75px) rotate(90deg); }
+.value-2000 { transform: rotate(54deg) translate(0, -75px) rotate(90deg); }
+.value-500 { transform: rotate(90deg) translate(0, -75px) rotate(90deg); }
+.value-1500 { transform: rotate(126deg) translate(0, -75px) rotate(90deg); }
+.value-3000 { transform: rotate(162deg) translate(0, -75px) rotate(90deg); }
+.value-800 { transform: rotate(198deg) translate(0, -75px) rotate(90deg); }
+.value-2500 { transform: rotate(234deg) translate(0, -75px) rotate(90deg); }
+.value-1200 { transform: rotate(270deg) translate(0, -75px) rotate(90deg); }
+.value-4000 { transform: rotate(306deg) translate(0, -75px) rotate(90deg); }
+.value-750 { transform: rotate(342deg) translate(0, -75px) rotate(90deg); }
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    color: #282c34;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.result.show {
+    opacity: 1;
+}
