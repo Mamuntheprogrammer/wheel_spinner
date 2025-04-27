@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    color: gold;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.probability-input {
+    margin-bottom: 2rem;
+}
+
+.probability-input input {
+    padding: 0.5rem;
+    width: 100px;
+    border: 2px solid gold;
+    background: #2a2a2a;
+    color: white;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+.slots {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.slot {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+    border: 3px solid gold;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.spin-button {
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.spin-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.spin-button:active {
+    transform: scale(0.95);
+}
+
+.result {
+    font-size: 1.2rem;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* @keyframes spin {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+} */
+
+.spinning {
+    animation: spin 0.2s ease-in-out infinite;
+}
