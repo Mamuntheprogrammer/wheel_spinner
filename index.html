@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casino Games Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        h1 {
+            color: gold;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .games-container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .game-card {
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 2rem;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .game-card h2 {
+            color: gold;
+            margin-bottom: 1rem;
+        }
+
+        .game-card p {
+            margin-bottom: 1.5rem;
+            color: #ccc;
+        }
+
+        .play-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ffd700, #ffa500);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .play-button:hover {
+            transform: scale(1.05);
+        }
+
+        .emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎰 Casino Games Collection 🎲</h1>
+    <div class="games-container">
+        <div class="game-card">
+            <div class="emoji">🎰</div>
+            <h2>Slot Machine</h2>
+            <p>Try your luck with our exciting slot machine! Set your winning probability and spin to win amazing prizes.</p>
+            <a href="slote Machine/index.html" class="play-button">Play Slots</a>
+        </div>
+        <div class="game-card">
+            <div class="emoji">🎡</div>
+            <h2>Spin Wheel</h2>
+            <p>Spin the wheel of fortune and win big! Various prizes await as you test your luck.</p>
+            <a href="spin Wheel/index.html" class="play-button">Spin to Win</a>
+        </div>
+    </div>
+</body>
+</html>
